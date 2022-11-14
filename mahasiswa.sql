@@ -16,4 +16,13 @@ CREATE TABLE mahasiswa (
     tanggal_lahir DATE NOT NULL,
     alamat VARCHAR(255) NOT NULL,
     FOREIGN KEY (id_jurusan) REFERENCES jurusan(id)
+    
 );
+-- insert jurusan
+insert into jurusan (kode, nama) values ("PTIF", "Pendidikan Teknik Informatika");
+
+-- insert mahasiswa
+insert into mahasiswa (id_jurusan, nim, nama, jenis_kelamin, tempat_lahir, tanggal_lahir, alamat) value (1, "20220001", "Enjel", "Perempuan", "Manado", "2002-08-18", "Kompleks Lab fmipa Unima");
+
+-- delete mahasiswa
+delete from mahasiswa where id = 1;
